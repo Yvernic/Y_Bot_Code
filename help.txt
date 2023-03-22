@@ -1,0 +1,12 @@
+y!help
+Returns this page
+y!register 
+Adds a user to the list of registered players, which allows them to participate in games and lets the bot keep track of their inventory and statistics
+y!inventory [optional:user]
+When used, the bot will respond with the inventory of the user mentioned, or if no user is mentioned the inventory of the user who sent the command
+y!statistics [optional:user]
+When used, the bot will respond with the game statistics of the user mentioned, or if no user is mentioned the game statistics of the user who sent the command
+y!startgame [users]
+When used, allows the user who sent the message to set up a game to play with the users mentioned
+y!cancel
+When used, cancels any game that is in progress
