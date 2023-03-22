@@ -17,7 +17,7 @@ class Game():
         # played - won
         # Uno - 2
         #Blackjack - 4
-        with open("Discord Bot/PLAYER_INFO.txt", "r") as file1:
+        with open("PLAYER_INFO.txt", "r") as file1:
             user_inv = file1.read()
         user_inv = user_inv.split("\n")                             #splits user_list into a list, separated by new lines
         for i in range(len(user_inv)):
@@ -51,7 +51,7 @@ class Game():
             user_inv[m] = " ".join(user_inv[m])
         user_inv = "\n".join(user_inv)
 
-        with open("Discord Bot/PLAYER_INFO.txt", "w") as file2:
+        with open("PLAYER_INFO.txt", "w") as file2:
             file2.write(user_inv)
         
 
