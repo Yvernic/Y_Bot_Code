@@ -77,7 +77,7 @@ async def on_message(message): #runs whenever a message is sent
 
 @client.event
 async def player_register(user_id, Rchannel):
-    registered_users = open("Discord Bot/PLAYER_INFO.txt", "r")     #opens the PLAYER_INFO text file in read mode
+    registered_users = open("PLAYER_INFO.txt", "r")     #opens the PLAYER_INFO text file in read mode
     user_list = registered_users.read()                             #stores the contents of the file into a variable
     registered_users.close()                                        #closes the file
     user_list = user_list.split("\n")                               #splits user_list into a list, separated by new lines
@@ -87,7 +87,7 @@ async def player_register(user_id, Rchannel):
     if user_id in user_list:                                      
         await Rchannel.send("You are already registered")                   #sends a message to the channel the original message was send in
     else:
-        registered_users = open("Discord Bot/PLAYER_INFO.txt", "a")         #opens the file in append mode
+        registered_users = open("PLAYER_INFO.txt", "a")         #opens the file in append mode
         registered_users.write("\n" + user_id + " 0 0 0 0 0")               #adds a new line followed by the user's ID [and zeros for their inventory and stats]
         registered_users.close()                                            #closes the file
         await Rchannel.send("You have been registered")                     #sends a confirmation message
@@ -95,7 +95,7 @@ async def player_register(user_id, Rchannel):
 
 @client.event
 async def view_inventory(user_id, Rchannel):
-    registered_users = open("Discord Bot/PLAYER_INFO.txt", "r")             #opens the PLAYER_INFO text file in read mode
+    registered_users = open("PLAYER_INFO.txt", "r")             #opens the PLAYER_INFO text file in read mode
     user_inv = registered_users.read()                          #stores the contents of the file into a variable
     registered_users.close()                                    #closes the file
     user_inv = user_inv.split("\n")                             #splits user_list into a list, separated by new lines
@@ -113,7 +113,7 @@ async def view_inventory(user_id, Rchannel):
 
 @client.event
 async def view_statistics(user_id, Rchannel):
-    registered_users = open("Discord Bot/PLAYER_INFO.txt", "r")             #opens the PLAYER_INFO text file in read mode
+    registered_users = open("PLAYER_INFO.txt", "r")             #opens the PLAYER_INFO text file in read mode
     user_sta = registered_users.read()                          #stores the contents of the file into a variable
     registered_users.close()                                    #closes the file
     user_sta = user_sta.split("\n")                             #splits user_sta into a list, separated by new lines
@@ -151,7 +151,7 @@ async def view_statistics(user_id, Rchannel):
 
 @client.event
 async def view_help(Rchannel):
-    help_doc = open("Discord Bot/help.txt", "r")      #opens the help.txt file...
+    help_doc = open("help.txt", "r")      #opens the help.txt file...
     help_message = help_doc.read()        #...copies the content to a variable...
     help_doc.close()                       #...and closes the file  
     help_message = help_message.split("\n")
