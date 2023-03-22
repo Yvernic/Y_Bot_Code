@@ -85,7 +85,7 @@ class UnoGame(y_game_class.Game):                                            #a 
             temp = hand[i] + ".png"                             #creates a new list for storing the card images in the hand 
             hand2.append(temp)
         for i in range(len(hand)):
-            path = r"C:\Users\yehen\OneDrive\Documents\Python\A_Python_Creations\Discord Bot\Images\Uno cards\\" + hand2[i]
+            path = r"Images\Uno cards\\" + hand2[i]
             img = Image.open(path)                              #finds the image of the specific card...
             new.paste(img, (534*i, 0))                          #...and adds it to the new image
         return new
@@ -104,7 +104,7 @@ class UnoGame(y_game_class.Game):                                            #a 
     
     def U_create_game_board(self):
         new = Image.new("RGBA", (5535, 3400))
-        path = r"C:\Users\yehen\OneDrive\Documents\Python\A_Python_Creations\Discord Bot\Images\Uno cards\\"
+        path = r"Images\Uno cards\\"
         if self.reverse == False:
             r_path = path + "Rd1.png"
         else:
