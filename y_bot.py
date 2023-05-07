@@ -231,4 +231,4 @@ async def Blackjack(players, Rchannel):
 
 
 
-client.run("ODM2MjU3OTE2NjI1MDkyNjU4.GyHwGa.PBkSgKznug2cu5wwMU6fLI1pUSVwirkB9Txjg0") #the unique token for the Discord bot user
+client.run("token") #the unique token for the Discord bot user
